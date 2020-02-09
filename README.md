@@ -1,7 +1,7 @@
 # Word Calendar Generator
 This program creates a printable Microsoft Word .docx calendar based on a particular user entered week or month, using a .ical file provided from Google Calendar (or similar).
 
-# WHAT DOES IT DO?
+# The Purpose
 
 This program is useful if you have a building with many rooms being used day to day for various things (such as classes or events), and you need to track what's going on in there using a paper based calendar that you print out regularly. Yes, paper. Recycle it when you're done, at least!
 
