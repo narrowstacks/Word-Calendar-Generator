@@ -1,0 +1,13 @@
+
+/build
+/dist
+/__pycache__
+*.csv
+*.docx
+*.pyc
+*.code-workspace
+*.spec
+.DS_Store
+.vscode/settings.json
+.vscode/launch.json
+
