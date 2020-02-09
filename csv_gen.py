@@ -4,8 +4,10 @@ import recurring_ical_events
 import urllib.request
 import datetime
 import os
-from settings import CORRECTION, ROOMS
-from settings import URL, HOLIDAYS
+from pytz import timezone
+from settings import URL, HOLIDAYS, CORRECTION, ROOMS, TIMEZONE
+from settings import TIMEZONE as tz
+
 
 
 # to do:
@@ -176,7 +178,7 @@ def sort_csv(csv_temp,csv_filename,list_position):
 def convert_timezone(time):
     time_string = f'{time}'
     if time_string[-6:] == "+00:00":
-        time = time.astimezone(timezone(SETTINGS.TIMEZONE))
+        time = time.astimezone(timezone(tz))
     return time
 
 
