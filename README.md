@@ -33,17 +33,12 @@ These are not hard requirements but just what the program has been tested with:
 
 [holidays](https://pypi.org/project/holidays/) - Detecting holidays
 
+[Gooey](https://pypi.org/project/Gooey/) - For the UI. Will eventually be replaced.
+
 # Usage
 
 * Install all the listed modules above
 
-```
-pip install python-docx
-pip install icalendar
-pip install recurring-ical-events
-pip install pytz
-pip install holidays
-```
 * Make a calendar on Google Calendar, or Outlook, or any service that provides a URL to access the .ical file.
     * In the "Location" field of each event, input the room name that it is taking place in. Make sure this is something you want to enter every time you add an event. Shorthand names works as long as you pay attention in the next steps.
 
