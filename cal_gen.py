@@ -491,7 +491,8 @@ def changeAMPM(var_name):
 
 def setup_document(header_title,month_or_week):
     if month_or_week == "week":
-        num_rows = NUMBER_OF_ROOMS - 3
+        # TODO: make this number more dynamic to prevent index error
+        num_rows = NUMBER_OF_ROOMS - 1
         num_cols = 8
     elif month_or_week == "month":
         num_rows = 13

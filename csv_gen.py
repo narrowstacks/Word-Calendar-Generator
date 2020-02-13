@@ -13,11 +13,14 @@ from settings import TIMEZONE as tz
 # to do:
 # add more comments!
 
+folder_location = os.path.dirname(os.path.abspath(__file__))
+
 def calgen(first_day,last_day,month_or_week):
 	''' generate calendar'''
  
 	# create/clear temp csv file for processing and safety
 	temp_file = "temp.csv"
+	temp_file = os.path.join(folder_location, temp_file)
 	open(temp_file,"w").close()
 
 
@@ -26,7 +29,7 @@ def calgen(first_day,last_day,month_or_week):
 
 
 	file_name_gen = f"{''.join(in_start_date)}-{''.join(in_end_date)}-calendar_table.csv"
-
+	file_name_gen = os.path.join(folder_location, file_name_gen)
 	# get ical file and assign it to a calendar variable
 
 	ical_string = urllib.request.urlopen(URL).read()
@@ -37,7 +40,7 @@ def calgen(first_day,last_day,month_or_week):
 	writeEventsToFile(events,temp_file)
 
 	sort_csv(temp_file,file_name_gen,5)
-	os.remove("temp.csv") 
+	os.remove(temp_file) 
 	return file_name_gen
 
 def get_date_range(raw_start_dates, raw_end_dates,month_or_week):
